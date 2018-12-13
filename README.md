@@ -49,7 +49,6 @@ If setting the flags through terminal/command promp (example on how to set the f
  ```
  
  ## Testing:
-This assumes TensorFlow is installed on the system. If you don't have GPU, please set the Flag *device_id* to */cpu:0* in [train.py](train.py).
 The [test.py](test.py) script runs the Siamese network on the test pairs.
 		
 The testing images are given in a csv file whose path is set with *data_file_path* in [test.py](test.py).	
@@ -58,14 +57,15 @@ The csv file provided contains 1048576 rows with 4 columns: index, image1, image
 The directory for the test images should be with the flag *DATA_DIR* in [test.py](test.py). The directory for the checkpints that are to be restored can be set with the flag *checkpt_dir* in [test.py](test.py).
 
 ## Running instruction for the test script:
+This assumes TensorFlow is installed on the system. If you don't have GPU, please set the Flag *device_id* to */cpu:0* in [train.py](train.py).
 If setting the flags in the script:
-			```bash
-      python test.py
-      ```
+```bash
+python test.py
+```
 
 If setting the flags through terminal/command prompt (example on how to set the flags. Add/remove flags as needed):
-			```
-      python test.py --data_file_path C:/Users/arbag/Documents/DeepLearning_in_CV/Project/Data/Data/submission_info.csv 
-      ```
+```bash
+python test.py --data_file_path C:/Users/arbag/Documents/DeepLearning_in_CV/Project/Data/Data/submission_info.csv 
+```
       
 **Note:** Due to size constraints, I have not uploaded the dataset or the checkpoints

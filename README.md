@@ -83,6 +83,5 @@ To run test script for the same images:
 	- Download the checkpoints from the link and place the Checkpoints folder inside this repository
 	
 	- execute:
-		```bash
+		
 		python test.py --data_file_path Data/submission_info.csv --DATA_DIR Data/test/ --checkpt_dir Checkpoints
-		```

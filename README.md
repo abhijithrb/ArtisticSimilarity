@@ -67,8 +67,13 @@ If setting the flags through terminal/command prompt (example on how to set the 
 ```bash
 python test.py --data_file_path C:/Users/arbag/Documents/DeepLearning_in_CV/Project/Data/Data/submission_info.csv 
 ```
-      
+
 **Note:** Due to size constraints, I have not uploaded the dataset or the checkpoints.
 I am instead providing a link to the checkpoints I uploaded to drive and uploading sample test images to this repository. 
 IMPORTANT: These are not the final checkpoints or the final test images. These are meant to be used for sample purpose.
 Link for checkpoints: https://drive.google.com/open?id=134u6m30vggmbbb_dXR8F1EttGUXbZh0t
+To run test script for the same images:
+	- Clone this repository
+	- Download the checkpoints from the link and place the Checkpoints folder inside this repository
+	- execute:
+		python test.py --data_file_path Data/submission_info.csv --DATA_DIR Data/test/ --checkpt_dir Checkpoints

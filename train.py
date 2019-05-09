@@ -160,7 +160,7 @@ def train_fn(input_1, input_2, Labels):
 	logits_2 = model_obj.build_model(input = input_2, reuse = True, _isTrain = True)
 
 	# Calculates the constrastive loss on the feature vectors on a pair of images
-	loss_op, predict_op = model_obj.calculate_loss(logits_1, logits_2, Labels, margin = 0.5)	
+	loss_op, predict_op = model_obj.calculate_loss(logits_1, logits_2, Labels, margin = 0.5)
 
 	# Optimizes the loss - Gradient Descent Optimizer is used
 	train_op = model_obj.optimizer(loss_op, FLAGS.LEARNING_RATE)	
@@ -188,7 +188,7 @@ def validation_fn(input_1, input_2, Labels):
 	logits_2 = model_obj.build_model(input = input_2, reuse = True, _isTrain = False)
 
 	# Calculates the constrastive loss on the feature vectors of a pair of images for the validation data
-	loss_op, predict_op = model_obj.calculate_loss(logits_1, logits_2, Labels, margin = 0.5)	
+	loss_op, predict_op = model_obj.calculate_loss(logits_1, logits_2, Labels, margin = 0.5)
 
 	# Finds the accuracy of the model for the validation data
 	accuracy = tf.reduce_mean(tf.cast(tf.equal(Labels, predict_op), tf.float32))
